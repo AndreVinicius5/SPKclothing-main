@@ -4,19 +4,18 @@ body {
     font-family: Roboto;
     font-style: normal;
     background-color: #171C1A;
-    max-width: 1375px;
-    max-height: 1375px;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .barrapesquisa {
     position: relative;
     width: 100%;
+    max-width: 1375px;
     height: 81px;
     background: #1c1c1c;
     border-radius: 5px;
@@ -37,14 +36,14 @@ body {
     height: 40px;
     background: #fff;
     border-radius: 5px;
-    font-family: "Roboto",system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     text-decoration: none;
     font-size: 20px;
 }
 
 .carrinho {
     position: absolute;
-    left: 900px;
+    right: 20px;
     top: 16px;
 }
 
@@ -52,21 +51,15 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    left: 991px;
+    right: 110px;
     top: 10px;
-}
-
-a, h1, h2, h3, p, ul {
-    margin: 0;
-    border: 0;
-    text-decoration: none;
 }
 
 .loguin a {
     position: absolute;
     width: 50px;
     height: 50px;
-    left: 1081px;
+    right: 20px;
     top: 15px;
     font-weight: 400;
     font-size: 20px;
@@ -82,12 +75,12 @@ a, h1, h2, h3, p, ul {
 }
 
 .slides {
-    position: absolute;
+    position: relative;
     display: flex;
-    left: 160px;
-    top: 85px;
-    overflow: hidden;
-    width: 980px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 980px;
     height: 480px;
     border-radius: 5px;
     border: 5px solid #00f99e;
@@ -113,9 +106,9 @@ a, h1, h2, h3, p, ul {
 }
 
 .manual-navigation {
-    position: absolute;
-    width: 980px;
-    margin-top: -115px;
+    position: relative;
+    width: 100%;
+    max-width: 980px;
     display: flex;
     justify-content: center;
 }
@@ -125,8 +118,6 @@ a, h1, h2, h3, p, ul {
     border: 2px solid #000;
     padding: 5px;
     transition: 1s;
-    left: 120px;
-    top: 650px;
     border-radius: 3px;
 }
 
@@ -159,8 +150,9 @@ a, h1, h2, h3, p, ul {
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 85px;
-    top: 560px;
+    top: 40px;
+    width: 100%;
+    max-width: 1375px;
 }
 
 .categoria a {
@@ -174,9 +166,7 @@ a, h1, h2, h3, p, ul {
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    top: 10px;
     color: #00f99e;
-    padding: auto;
 }
 
 .categoria a:hover {
@@ -186,9 +176,12 @@ a, h1, h2, h3, p, ul {
 
 .promocoes {
     display: flex;
-    position: relative;
     justify-content: center;
+    align-items: center;
+    position: relative;
     top: -165px;
+    width: 100%;
+    max-width: 1375px;
 }
 
 .promocoes img {
@@ -201,12 +194,12 @@ a, h1, h2, h3, p, ul {
 
 .promocoes h2 {
     display: grid;
-    position: absolute;
+    position: relative;
     padding: 10px;
     font-size: 70px;
-    width: 1375px;
+    width: 100%;
+    max-width: 1375px;
     height: 100px;
-    top: 988px;
     justify-content: center;
     align-items: center;
     background-color: #1c1c1c;
@@ -228,12 +221,10 @@ a, h1, h2, h3, p, ul {
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 100px;
-    top: 1118px;
-    text-decoration: none;
+    top: 40px;
+    width: 100%;
+    max-width: 1375px;
     font-size: 63px;
-    margin: 0;
-    padding: 0;
     justify-self: center;
 }
 
@@ -245,15 +236,12 @@ a, h1, h2, h3, p, ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     gap: 20px;
-    top: 1408px;
+    top: 40px;
+    width: 100%;
+    max-width: 1375px;
     text-align: center;
-}
-
-.botaocomprar h3 {
-    position: absolute;
-    left: 100px;
 }
 
 .botaocomprar h3 {
@@ -266,63 +254,20 @@ a, h1, h2, h3, p, ul {
     color: #1c1c1c;
 }
 
-.botaocomprar2 a:hover {
-    background-color: #00f99e;
-    border: 10px solid #00f99e;
-    color: #1c1c1c;
-}
-
-.botaocomprar a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 20px;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    top: -20px;
-    width: 330px;
-    border: 10px solid #1c1c1c;
-    background-color: #1c1c1c;
-    color: #00f99e;
-    margin-top: 30px;
-}
-
 .botaocomprar2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     gap: 20px;
-    top: 1984px;
+    top: 40px;
+    width: 100%;
+    max-width: 1375px;
     text-align: center;
 }
 
 .botaocomprar2 h3 {
-    position: absolute;
-    left: 100px;
-}
-
-.botaocomprar2 h3 {
     position: relative;
-}
-
-.botaocomprar2 a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 20px;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    top: -20px;
-    width: 330px;
-    border: 10px solid #1c1c1c;
-    background-color: #1c1c1c;
-    color: #00f99e;
-    margin-top: 30px;
 }
 
 .nomeitem {
@@ -334,9 +279,8 @@ a, h1, h2, h3, p, ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     gap: 20px;
-    left: 180px;
     text-align: center;
     justify-items: center;
     text-decoration: none;
@@ -347,10 +291,8 @@ a, h1, h2, h3, p, ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     gap: 20px;
-    left: 100px;
-    top: 1529px;
     text-decoration: none;
     font-size: 20px;
     margin: 0;
@@ -371,17 +313,14 @@ a, h1, h2, h3, p, ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     background: #1c1c1c;
     width: 100%;
     text-align: center;
     padding: 40px;
     box-sizing: border-box;
-    top: 2150px;
-    left: 0;
-    right: 0;
+    top: 40px;
 }
-
 .rodape p {
     color: #00f99e;
 }
