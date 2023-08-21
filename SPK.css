@@ -20,11 +20,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .logo img {
   width: 221px;
   height: 65px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 120px;
 }
 
 .formulario input {
@@ -35,35 +40,38 @@ body {
 .campodigitar input {
   width: 462px;
   height: 40px;
+  margin: 0 auto;
   background: #fff;
   border-radius: 5px;
   font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   font-size: 20px;
-}
-
-.carrinho, .carta, .loguin a {
-  position: absolute;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
 }
 
 .carrinho {
+  position: absolute;
   top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 120px;
 }
 
 .carta {
   width: 50px;
   height: 50px;
+  position: absolute;
   top: 10px;
-  left: calc(991px - 50px);
+  right: 30px;
 }
 
 .loguin a {
   width: 50px;
   height: 50px;
+  position: absolute;
   top: 15px;
-  left: calc(1081px - 50px);
+  right: 120px;
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
@@ -75,24 +83,19 @@ body {
 
 .slider {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
 }
 
 .slides {
+  position: absolute;
   display: flex;
-  flex-wrap: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 85px;
   overflow: hidden;
-  width: 100%;
-  max-width: 980px;
+  width: 980px;
   height: 480px;
   border-radius: 5px;
   border: 5px solid #00f99e;
-  margin-top: 10px;
-  justify-content: center;
-  align-items: center;
 }
 
 .slides input {
@@ -100,36 +103,41 @@ body {
 }
 
 .slide {
-  flex: 0 0 100%;
+  width: 400%;
   position: relative;
-  width: 100%;
+  width: 980px;
   height: 480px;
 }
 
 .slide img {
-  width: 100%;
+  width: 980px;
   border-radius: 5px;
+  position: relative;
+  top: 0;
+  left: 1px;
 }
 
 .manual-navigation {
-  width: 100%;
-  max-width: 980px;
+  position: absolute;
+  width: 980px;
   margin-top: -115px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .manual-btn {
+  position: relative;
   border: 2px solid #000;
   padding: 5px;
   transition: 1s;
+  left: 120px;
+  top: 650px;
   border-radius: 3px;
-  margin-right: 10px;
 }
 
-.manual-btn:not(:last-child) {
+.manual-btn:not(last-child) {
   margin-right: 10px;
 }
 
@@ -157,13 +165,12 @@ body {
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  left: 85px;
+  top: 560px;
   text-align: center;
   justify-items: center;
   width: 100%;
   max-width: 1375px;
-  top: 560px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .categoria a {
@@ -177,7 +184,9 @@ body {
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  top: 10px;
   color: #00f99e;
+  padding: auto;
 }
 
 .categoria a:hover {
@@ -191,11 +200,8 @@ body {
   gap: 20px;
   position: relative;
   top: -165px;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-width: 1375px;
-  margin-top: 20px;
 }
 
 .promocoes img {
@@ -207,6 +213,7 @@ body {
 }
 
 .promocoes h2 {
+  display: grid;
   position: absolute;
   padding: 10px;
   font-size: 70px;
@@ -233,8 +240,12 @@ body {
 
 .itemspromocoes {
   gap: 20px;
+  position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1118px;
   text-decoration: none;
   text-align: center;
   align-items: center;
@@ -243,51 +254,60 @@ body {
   padding: 0;
   justify-self: center;
   justify-content: center;
-  position: relative;
   width: 100%;
   max-width: 1375px;
-  top: 1118px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .itemspromocoes img:hover {
   opacity: .5;
 }
 
-.botaocomprar, .botaocomprar2 {
+.botaocomprar {
   display: flex;
   gap: 20px;
-  position: relative;
+  position: absolute;
+  top: 1408px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1375px;
-  top: 1408px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 30px;
 }
 
-.botaocomprar h3, .botaocomprar2 h3 {
-  position: absolute;
-  left: 100px;
+.botaocomprar h3 {
   position: relative;
 }
 
-.botaocomprar a, .botaocomprar2 a {
-  justify-content: center;
+.botaocomprar a:hover {
+  background-color: #00f99e;
+  border: 10px solid #00f99e;
+  color: #1c1c1c;
+}
+
+.botaocomprar2 {
   display: flex;
   gap: 20px;
+  position: absolute;
+  top: 1984px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  padding: 5px;
-  border-radius: 5px;
+  justify-content: center;
   align-items: center;
-  width: 330px;
-  border: 10px solid #1c1c1c;
-  background-color: #1c1c1c;
-  color: #00f99e;
-  margin-top: 30px;
+  width: 100%;
+  max-width: 1375px;
+}
+
+.botaocomprar2 h3 {
+  position: relative;
+}
+
+.botaocomprar2 a:hover {
+  background-color: #00f99e;
+  border: 10px solid #00f99e;
+  color: #1c1c1c;
 }
 
 .nomeitem {
@@ -296,20 +316,18 @@ body {
 }
 
 .adicionarcarrinho {
+  position: absolute;
   display: grid;
-  gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   justify-items: center;
   text-decoration: none;
   border-radius: 5px;
-  position: relative;
   width: 100%;
   max-width: 1375px;
-  top: 1529px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 20px;
 }
 
 .itemspromocoes2 {
@@ -317,6 +335,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1529px;
   text-decoration: none;
   text-align: center;
   align-items: center;
@@ -325,10 +346,6 @@ body {
   padding: 0;
   width: 100%;
   max-width: 1375px;
-  top: 1529px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
 }
 
 .atalhos li,
@@ -343,21 +360,17 @@ a {
 }
 
 .rodape {
+  position: absolute;
   background: #1c1c1c;
   width: 100%;
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
-  position: relative;
   top: 2150px;
   left: 0;
   right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .rodape p {
   color: #00f99e;
-  margin-top: 10px;
 }
